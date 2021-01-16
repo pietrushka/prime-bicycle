@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://prime-bicycle/./src/styles.scss"],"names":[],"mappings":"AAAA;EACI;EACA;AACJ,C","file":"index.css","sourcesContent":["body {\r\n    background-color: red;\r\n    font-size: 67px;\r\n}"],"sourceRoot":""}

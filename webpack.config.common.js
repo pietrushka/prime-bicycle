@@ -1,15 +1,11 @@
 const path = require('path')
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
-
-const mode = process.env.NODE_ENV || "development"
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry:{
     index: [
-      "./src/index.html",
       "./src/main.js",
       "./src/styles.scss",
     ]
@@ -21,21 +17,7 @@ module.exports = {
 
 
   plugins: [
-    new HtmlWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-    new HtmlCriticalWebpackPlugin({
-      base: path.resolve(__dirname, 'dist'),
-      src: 'index.html',
-      dest: 'index.html',
-      inline: true,
-      minify: true,
-      extract: true,
-      width: 375,
-      height: 565,
-      penthouse: {
-        blockJSRequests: false,
-      }
-    })
+    new MiniCssExtractPlugin(),  
   ],
 
   module: {
@@ -47,11 +29,6 @@ module.exports = {
           // without additional settings, this will reference .babelrc
           loader: "babel-loader",
         },
-      },
-
-      {
-        test: /\.html$/i,
-        loader: 'html-loader',
       },
 
       {
@@ -69,12 +46,5 @@ module.exports = {
       },
       
     ],
-  },
-
-  devtool: "source-map", 
-
-  // required if using webpack-dev-server
-  devServer: {
-    contentBase: "./dist"
   },
 }
