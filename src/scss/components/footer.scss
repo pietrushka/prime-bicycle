@@ -158,6 +158,24 @@
                             display: block;
                         }
                     }
+
+                    .heading-container {
+                        display: inline-flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: calc(100% - 22px);
+                        
+                        .accordeon-handler {
+                            color: $white;
+                            background-color: transparent;
+                            font-size: 20px;
+
+                            @media (min-width: 1024px) {
+                                display: none;
+                            }
+                        }
+                    }
+
                     
                     .option-list {
                         display: none;
