@@ -1,0 +1,34 @@
+.header {
+    margin-top: 2rem;
+    position: absolute;
+    width: 100%;
+    color: black;
+    z-index: 1;
+    padding: 22px;
+
+    .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 25px;
+            height: 10px;
+
+            .hamburger__inner {
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: black;
+            }
+        }
+
+        .cart {
+            background-color: transparent;
+            height: 20px;
+        }
+    }
+}
