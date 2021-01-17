@@ -2,6 +2,8 @@ const path = require('path')
 const {merge} = require('webpack-merge');
 const common = require('./webpack.config.common')
 const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const glob = require('glob')
 
 module.exports = merge(common, {
   mode: "production",
@@ -19,7 +21,10 @@ module.exports = merge(common, {
         penthouse: {
           blockJSRequests: false,
         }
-      })
+      }),
+      new PurgecssPlugin({
+        paths: glob.sync(`dist/**/*`,  { nodir: true }),
+      }),
     ]
   }
 });
