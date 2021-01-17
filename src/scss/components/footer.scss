@@ -14,7 +14,7 @@
         }
 
         .horizontal-line {
-            background-color: $grey-dark;
+            background-color: $gray-dark;
             height: 1px;
             width: 100vw;
             margin-left: -22px;
@@ -46,7 +46,7 @@
                 margin-top: 1.5rem;
 
                 .group__span {
-                    color: $grey-dark;
+                    color: $gray-dark;
                     text-transform: uppercase;
                     font-size: 13px;
                 }
@@ -90,7 +90,7 @@
 
                 .email-container {
                     display: block;
-                    border: 1px solid $grey-dark;
+                    border: 1px solid $gray-dark;
                     padding: .75rem 1.5rem;
                     font-size: 13px;
                     display: flex;
@@ -113,7 +113,7 @@
                 }
 
                 .newsletter__clause {
-                    color: $grey-dark;
+                    color: $gray-dark;
                     margin-top: 1rem;
                     font-size: 12px;
 
@@ -135,7 +135,7 @@
                         align-items: center;
                         width: 40px;
                         height: 40px;
-                        border: 1px solid $grey-dark;
+                        border: 1px solid $gray-dark;
                         margin-right: 1rem;
                     }
                     @media (min-width: 1024px) {
@@ -187,7 +187,7 @@
 
                         .option {
                             font-size: 16px;
-                            color: $grey-dark;
+                            color: $gray-dark;
                             margin-top: 1.25rem;
                             cursor: pointer;
 
