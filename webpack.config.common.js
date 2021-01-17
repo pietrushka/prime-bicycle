@@ -1,13 +1,11 @@
 const path = require('path')
-
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry:{
     index: [
-      "./src/main.js",
-      "./src/styles.scss",
+      // "./src/main.js",
+      "./src/scss/index.scss",
     ]
   },
   output:{
@@ -22,14 +20,14 @@ module.exports = {
 
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          // without additional settings, this will reference .babelrc
-          loader: "babel-loader",
-        },
-      },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     // without additional settings, this will reference .babelrc
+      //     loader: "babel-loader",
+      //   },
+      // },
 
       {
         //test both css and scss
