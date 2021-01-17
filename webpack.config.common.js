@@ -20,6 +20,11 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.(png|jpg|webp)$/,
+        loader: 'url-loader'
+      },
+
       // {
       //   test: /\.js$/,
       //   exclude: /node_modules/,
