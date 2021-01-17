@@ -28,7 +28,7 @@
         background-image: url("../images/BRYN1357.webp");
         background-size:cover;
         background-position: center;
-        mix-blend-mode: multiply;
+        //mix-blend-mode: multiply;
 
         .intro__content {
             display: flex;
@@ -40,13 +40,12 @@
             color: $white;
 
             .heading {
-                font-family: Signika;
+                
                 
                 &--main {
                     font-size: 45px;
                     line-height: 45px;
                     font-weight: 700;
-                    font-family: Signika;
                     margin-top: 1rem;
                 }
     
@@ -68,7 +67,6 @@
                 background: $black;
                 padding: 1em 1.5em;
                 text-align: left;
-                font-family: Signika;
                 font-weight: 300;
                 color: $white;
                 text-transform: uppercase;

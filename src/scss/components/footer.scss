@@ -1,0 +1,164 @@
+.footer {
+    background-color: $black;
+
+    .footer__inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 22px;
+
+        @media (min-width: 1024px) {
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .horizontal-line {
+            background-color: $grey-dark;
+            height: 1px;
+            width: 100vw;
+            margin-left: -22px;
+
+            @media (min-width: 1024px) {
+                display: none;
+            }
+        }
+
+        .contact {
+            padding: 22px 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+
+            .contact__group {
+
+                .group__heading {
+                    text-transform: uppercase;
+                    color: $white;
+                    font-size: 30px;
+                    margin-bottom: .25rem;
+                }
+
+                .group__text {
+                    color: $white;
+                    font-size: 11px;
+                    width: 50%;
+                }
+
+                .group__span {
+                    color: $grey-dark;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                }
+            }
+            
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            @media (min-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr 2fr;
+            }
+
+            .grid-section {
+                padding: 22px 0;
+            }
+
+            .heading-small {
+                font-size: 17px;
+                text-transform: uppercase;
+                color: $white;
+                font-weight: 300;
+            }
+
+            .newsletter {
+                .newsletter__text {
+                    color: $white;
+                    font-weight: 300;
+                    margin: 1rem 0;
+                }
+
+                .email-container {
+                    display: block;
+                    border: 1px solid $grey-dark;
+                    padding: 1rem 1.5rem;
+                    font-size: 13px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: calc(100% - 22px);
+
+                    .email-input {
+                        display: block;
+                        background-color: transparent;
+                        border: 0;
+                    }
+                    .email-btn {
+                        display: block;
+                        color: $white;
+                        background-color: transparent;
+                        border: 0;
+                    }
+                }
+
+                .newsletter__clause {
+                    color: $grey-dark;
+                    margin-top: 1rem;
+                    font-size: 12px;
+
+                    .underline-span {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .social-media {
+                .media-icons {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-top: 1.5rem;
+
+                    .icon-box {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid $grey-dark;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+            .info-menu {
+                .info-section {
+                    padding: 22px 0;
+                    
+                    &.open {
+                        .option-list {
+                            display: block;
+                        }
+                    }
+                    
+                    .option-list {
+                        display: none;
+                        list-style: none;
+
+                        
+
+
+                        .option {
+                            font-size: 16px;
+                            color: $grey-dark;
+                            margin-top: 1.25rem;
+                        }
+
+
+                    }
+
+
+                }
+            }
+        }
+    }
+}

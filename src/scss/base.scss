@@ -5,11 +5,13 @@
 $black: #000000;
 $white: #FFFFFF;
 $orange: #F7931E;
-$grey-light: #f4f4ec;
+$grey-light: #fcfcfc;
+$grey-dark: #3C3C3C;
 
 html,
 body {
   scroll-behavior: smooth; 
+  font-family: Signika;
 }
 
 a {
