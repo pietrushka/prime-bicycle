@@ -6,6 +6,10 @@
     z-index: 1;
     padding: 22px;
 
+    @media (min-width: 1024px) {
+        padding: 22px 5vw;
+    }
+
     .header__inner {
         display: flex;
         align-items: center;
@@ -17,6 +21,7 @@
             justify-content: space-between;
             width: 25px;
             height: 10px;
+            background-color: $grey-light;
 
             .hamburger__inner {
                 display: block;
@@ -24,6 +29,13 @@
                 height: 1px;
                 background-color: black;
             }
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .cart {
