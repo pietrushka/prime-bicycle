@@ -1,22 +1,27 @@
 const path = require('path')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const PurgecssPlugin = require('purgecss-webpack-plugin')
 const glob = require('glob')
 
-module.exports = {
-  entry:{
-    index: [
-      // "./src/main.js",
-      "./src/scss/index.scss",
-    ]
-  },
-  output:{
-      path: path.resolve(__dirname, './dist'),
-      filename: '[name].js'
-  },
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 
+const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
+  dir => new HTMLWebpackPlugin({
+    filename: path.basename(dir), // Output
+    template: dir, // Input
+  }),
+)
+
+module.exports = {
+  entry: [ "./src/scss/index.scss" ],
+
+  output: {
+    path: path.resolve(__dirname, 'dist')
+  },
 
   plugins: [
+    ...generateHTMLPlugins(),
+
     new MiniCssExtractPlugin(),  
     new PurgecssPlugin({
       paths: glob.sync(`dist/**/*`,  { nodir: true }),
@@ -26,18 +31,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpg|webp)$/,
-        loader: 'url-loader'
+        test: /\.html$/,
+        loader: 'raw-loader',
       },
-
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   use: {
-      //     // without additional settings, this will reference .babelrc
-      //     loader: "babel-loader",
-      //   },
-      // },
 
       {
         //test both css and scss
@@ -53,6 +49,20 @@ module.exports = {
         ],
       },
       
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          // without additional settings, this will reference .babelrc
+          loader: "babel-loader",
+        },
+      },   
+         
+      {
+        test: /\.(png|jpg|webp)$/,
+        loader: 'url-loader'
+      },
+
     ],
   },
 }
