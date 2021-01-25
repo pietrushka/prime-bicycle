@@ -1,9 +1,10 @@
 .section {
     width: 100%;
     min-height: 100vh;
+    position: relative;
 }
 
-.section-layout {
+.section__inner {
     padding: 22px;
     width: 100%;
     
@@ -26,6 +27,6 @@
     text-transform: uppercase;
 }
 
-.space-text {
+.ml-10 {
     margin-left: 10px;
 }

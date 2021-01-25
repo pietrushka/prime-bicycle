@@ -1,9 +1,8 @@
-.section-intro {
-    position: relative;
+.intro {
     background-color: $gray-light;
 }
 
-.slider-indicators {
+.slider-marker {
     position: absolute;
     top: 50%;
     left: 22px;
@@ -11,18 +10,18 @@
     z-index: 1;
 }
 
-.indicator {
+.slider-marker__item {
     width: 2px;
     height: 45px;
     background-color: $white;
     margin-bottom: 5px;
 
-    &.active {
+    &--active {
         background-color: $orange;
     }
 }
 
-.bg-image-container {
+.intro__image {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -58,29 +57,28 @@
     margin: 0 auto;
 }
 
-.heading {
-    &--main {
-        font-size: 45px;
-        line-height: 45px;
-        font-weight: 900;
-        margin-top: 1rem;
 
-        @media (min-width: 1024px) {
-            font-size: 100px;
-            line-height: 85px;
-        }
+.intro__main-heading {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 900;
+    margin-top: 1rem;
+
+    @media (min-width: 1024px) {
+        font-size: 100px;
+        line-height: 85px;
     }
+}
 
-    &--secondary {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 18px;
-        letter-spacing: 1.28px;
+.intro__secondary-heading {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 1.28px;
 
-        @media (min-width: 1024px) {
-            font-size: 25px;
-            letter-spacing: 3px;
-            line-height: 30px;
-        }
+    @media (min-width: 1024px) {
+        font-size: 25px;
+        letter-spacing: 3px;
+        line-height: 30px;
     }
 }
