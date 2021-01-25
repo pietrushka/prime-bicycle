@@ -1,15 +1,15 @@
 .section {
     width: 100%;
     min-height: 100vh;
+}
 
-    .section-layout {
-        padding: 22px;
-        width: 100%;
-
-        @media (min-width: 1024px) {
-            padding: 5vw;
-            width: auto;
-        }
+.section-layout {
+    padding: 22px;
+    width: 100%;
+    
+    @media (min-width: 1024px) {
+        padding: 5vw;
+        width: auto;
     }
 }
 
@@ -24,7 +24,6 @@
     font-weight: 300;
     color: $white;
     text-transform: uppercase;
-
 }
 
 .space-text {
