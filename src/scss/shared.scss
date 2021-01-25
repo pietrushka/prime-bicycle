@@ -1,5 +1,5 @@
 .section {
-    max-width: 100vw;
+    width: 100%;
     min-height: 100vh;
 
     .section-layout {
@@ -15,7 +15,6 @@
 
 .cta-btn {
     margin-top: 1.5rem;
-    width: fit-content;
     display: block;
     font-size: 14px;
     line-height: 15px;

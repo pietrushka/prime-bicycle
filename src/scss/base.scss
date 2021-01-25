@@ -13,8 +13,9 @@ html,
 body { 
   scroll-behavior: smooth; 
   font-family: Signika;
-  min-width: 100vw;
+  width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
