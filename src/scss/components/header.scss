@@ -7,6 +7,12 @@
     padding: 22px;
 
     @media (min-width: 1024px) {
+        margin-top: 1.5rem;
+        padding: 0 5vw;
+    }
+
+    @media (min-width: 1440px) {
+        margin-top: 2rem;
         padding: 22px 5vw;
     }
 }
