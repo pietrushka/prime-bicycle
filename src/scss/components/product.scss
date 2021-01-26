@@ -10,17 +10,35 @@
 .product__name {
     text-transform: uppercase;
     color: $gray-text;
-    font-size: 74px;
     text-align: center;
     word-wrap: break-word;
     line-height: 1em;
     padding: 0 22px;
+    font-size: 62px;
+    
+    @media (min-width: 596px) {
+        font-size: 74px;
+    }
+
+    @media (min-width: 596px) {
+        br {
+            display: none;
+        }
+    }
 
     @media (min-width: 1024px) {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        font-size: 135px;
+    }
+    
+    @media (min-width: 1440px) {
+        font-size: 190px;
+    }
+
+    @media (min-width: 1770px) {
         font-size: 240px;
     }
 }
